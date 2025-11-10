@@ -1,0 +1,235 @@
+:root {
+  color-scheme: light;
+  --font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  --bg: #f7f7fb;
+  --card-bg: #ffffff;
+  --text: #1b1b1f;
+  --muted: #5b5b66;
+  --accent: #2652ff;
+  --border: #e0e0ee;
+  --shadow: 0 18px 36px rgba(26, 35, 126, 0.08);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  letter-spacing: -0.01em;
+  font-size: 16px;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 64px max(10vw, 48px) 32px;
+  background: radial-gradient(circle at top left, #dee6ff, #f7f7fb 60%);
+  gap: 32px;
+}
+
+.hero__content {
+  max-width: 640px;
+}
+
+.hero__tag {
+  display: inline-flex;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(38, 82, 255, 0.12);
+  color: var(--accent);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 12px;
+  margin: 0 0 16px;
+}
+
+.hero__name {
+  margin: 0 0 12px;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 700;
+}
+
+.hero__title {
+  margin: 0 0 16px;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.hero__contacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.hero__contacts span {
+  opacity: 0.4;
+}
+
+.hero__photo {
+  width: 156px;
+  height: 156px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+  border: 6px solid #ffffffd9;
+}
+
+.layout {
+  padding: 0 max(10vw, 48px) 64px;
+  display: grid;
+  gap: 48px;
+}
+
+section > h2 {
+  margin-bottom: 16px;
+  font-size: 24px;
+}
+
+p {
+  margin: 0 0 12px;
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 4px 0 0;
+}
+
+.timeline-item {
+  padding: 24px 28px;
+  background: var(--card-bg);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  margin-bottom: 20px;
+}
+
+.timeline-item header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+  margin-bottom: 16px;
+}
+
+.timeline-item h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.timeline-item ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.timeline-item li + li {
+  margin-top: 10px;
+}
+
+.columns {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 18px;
+  padding: 20px 24px;
+  box-shadow: var(--shadow);
+  margin-bottom: 16px;
+}
+
+.card h3 {
+  margin: 0 0 6px;
+  font-size: 18px;
+}
+
+.skills {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+  display: grid;
+  gap: 8px;
+}
+
+.skills li {
+  background: rgba(38, 82, 255, 0.08);
+  color: var(--accent);
+  border-radius: 999px;
+  padding: 8px 14px;
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  font-size: 14px;
+}
+
+.principles {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.principles li {
+  background: var(--card-bg);
+  border-radius: 18px;
+  padding: 18px 22px;
+  box-shadow: var(--shadow);
+}
+
+.principles strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 16px;
+}
+
+.footer {
+  padding: 24px max(10vw, 48px) 64px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 48px 24px 24px;
+  }
+
+  .layout {
+    padding: 0 24px 48px;
+  }
+
+  .timeline-item,
+  .card,
+  .principles li {
+    padding: 20px;
+  }
+}
+
