@@ -90,12 +90,49 @@ a:focus {
 }
 
 .hero__photo {
-  width: 156px;
-  height: 156px;
-  border-radius: 50%;
-  object-fit: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  background: var(--card-bg);
+  padding: 18px 20px 20px;
+  border-radius: 24px;
   box-shadow: var(--shadow);
-  border: 6px solid #ffffffd9;
+  border: 1px solid rgba(38, 82, 255, 0.12);
+  position: relative;
+  isolation: isolate;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.hero__photo::after {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border-radius: 20px;
+  background: radial-gradient(circle at top, rgba(38, 82, 255, 0.12), transparent);
+  z-index: -1;
+}
+
+.hero__photo img {
+  width: 240px;
+  height: 240px;
+  border-radius: 24px;
+  object-fit: cover;
+  box-shadow: 0 14px 28px rgba(26, 35, 126, 0.16);
+  transition: transform 0.25s ease;
+}
+
+.hero__photo figcaption {
+  font-size: 14px;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero__photo:hover img,
+.hero__photo:focus-visible img {
+  transform: translateY(-4px);
 }
 
 .layout {
@@ -152,9 +189,9 @@ p {
 }
 
 .columns {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 32px;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 .card {
@@ -187,6 +224,68 @@ p {
   align-items: center;
   width: fit-content;
   font-size: 14px;
+}
+
+.certificates {
+  display: grid;
+  gap: 16px;
+}
+
+.certificate-card {
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+  background: var(--card-bg);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  padding: 18px;
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.certificate-card:hover,
+.certificate-card:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 22px 44px rgba(26, 35, 126, 0.12);
+}
+
+.certificate-card__preview {
+  width: min(42vw, 220px);
+  height: auto;
+  max-height: 160px;
+  display: block;
+  border-radius: 12px;
+  object-fit: contain;
+  background: rgba(38, 82, 255, 0.08);
+  border: none;
+  pointer-events: none;
+}
+
+.certificate-card__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+
+.certificate-card__title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.certificate-card__fallback {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  padding: 12px;
 }
 
 .principles {
@@ -230,6 +329,16 @@ p {
   .card,
   .principles li {
     padding: 20px;
+  }
+
+  .certificate-card {
+    flex-direction: column;
+  }
+
+  .certificate-card__preview {
+    width: 100%;
+    height: auto;
+    max-height: none;
   }
 }
 

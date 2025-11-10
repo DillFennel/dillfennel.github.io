@@ -28,11 +28,12 @@
           <span>Москва, Россия</span>
         </div>
       </div>
-      <img
-        class="hero__photo"
-        src="https://avatars.githubusercontent.com/u/00000000"
-        alt="Портрет Юлии Дилл"
-      />
+      <figure class="hero__photo">
+        <img
+          src="data/avatar/Селфи.jpg"
+          alt="Портрет Юлии Петрушиной"
+        />
+      </figure>
     </header>
 
     <main class="layout">
@@ -118,9 +119,26 @@
           </article>
 
           <h2>Сертификаты</h2>
-          <ul class="skills">
-            <li>Летние школы Яндекса · Школа бэкенд-разработки · 2025</li>
-          </ul>
+          <div class="certificates">
+            <a
+              class="certificate-card"
+              href="data/sertificats/summer_school.pdf"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                class="certificate-card__preview"
+                src="data/sertificats/summer_school_preview.png"
+                alt="Сертификат «Летние школы Яндекса — Школа бэкенд-разработки»"
+              />
+              <div class="certificate-card__info">
+                <h3 class="certificate-card__title">
+                  Летние школы Яндекса · Школа бэкенд-разработки
+                </h3>
+                <p class="meta">2025</p>
+              </div>
+            </a>
+          </div>
         </div>
       </section>
 
