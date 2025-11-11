@@ -13,116 +13,52 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="hero">
-      <div class="hero__content">
-        <p class="hero__tag">Резюме</p>
-        <h1 class="hero__name">Петрушина Юлия Дмитриевна</h1>
-        <p class="hero__title">Бэкенд-разработчик</p>
-        <div class="hero__contacts">
-          <a href="mailto:dill.yulia@gmail.com">dillfennelsch@gmail.com</a>
-          <span>·</span>
-          <a href="https://github.com/dillfennel">github.com/dillfennel</a>
-          <span>·</span>
-          <a href="https://t.me/dillfennel">@dillfennel</a>
-          <span>·</span>
-          <span>Москва, Россия</span>
-        </div>
-      </div>
-      <figure class="hero__photo">
-        <img
-          src="data/avatar/Селфи.jpg"
-          alt="Портрет Юлии Петрушиной"
-        />
-      </figure>
-    </header>
-
-    <main class="layout">
-      <section>
-        <h2>Обо мне</h2>
-        <p>
-          Студент-разработчик, сфокусирована на бэкенд-разработке на C++. 
-          Имею практический опыт работы в ИСП РАН. 
-          Прошла Летнюю школу Яндекса, а именно Школу бэкенд-разработки на C++,
-           где разрабатывали асинхронные сервисы на фреймворке Userver. 
-           Владею сопутствующим технологиями: 
-           Python, SQL/NoSQL базы данных, Git, Linux и Docker.
-        </p>
-      </section>
-
-      <section>
-        <h2>Опыт работы</h2>
-
-        <article class="timeline-item">
-          <header>
-            <div>
-              <h3>Лаборант в научной лаборатории "Гетерогенных компьютерных систем" . ИСП РАН</h3>
-              <p class="meta">2024 — н.в.</p>
-            </div>
-            <p class="meta">C++, Python, Bash, Yosys, OpenROAD</p>
-          </header>
-          <ul>
-            <li>
-              Формализация и алгоритмизация поставленных задач
-            </li>
-            <li>
-              Написание программного кода, в основном на C++
-            </li>
-            <li>
-              Проверка и отладка программного кода
-            </li>
+    <div class="page">
+      <header class="hero">
+        <div class="hero__content">
+          <p class="hero__tag">Резюме</p>
+          <h1 class="hero__name">Петрушина Юлия Дмитриевна</h1>
+          <p class="hero__title">Бэкенд-разработчик</p>
+          <div class="hero__contacts">
+            <a href="mailto:dillfennelsch@gmail.com">dillfennelsch@gmail.com</a>
+            <span>·</span>
+            <a href="https://github.com/dillfennel">github.com/dillfennel</a>
+            <span>·</span>
+            <a href="https://t.me/dillfennel">@dillfennel</a>
+            <span>·</span>
+            <span>Москва, Россия</span>
+          </div>
+          <ul class="skills skills--languages">
+            <li>Английский — Intermediate (B1)</li>
           </ul>
-        </article>
-      </section>
-
-      <section class="columns">
-        <div>
-          <h2>Проекты</h2>
-          <article class="card">
-            <h3>Личный проект · GeoAnalysis</h3>
-            <p class="meta">2024 · Python</p>
-            <p>
-              Основной функционал - анализ данных из открытых источников с использованием библиотеки Pandas.
-              Программа хранит данные о хексагонах в Москве и позволяет пользователю получать информацию о хексагонах в зависимости от запроса.
-            </p>
-            <p class="meta">
-              <a href="https://github.com/DillFennel/GeoAnalysis"
-                >github.com/DillFennel/GeoAnalysis</a
-              >
-            </p>
-          </article>
-          <article class="card">
-            <h3>Личный проект · PPTX_PDF_text_bot</h3>
-            <p class="meta">2025 · Python</p>
-            <p>
-              Бот в Telegram для работы с PPTX и PDF файлами, позволяющий извлекать текст из файлов и сохранять его в текстовый файл.
-            </p>
-            <p class="meta">
-              <a href="https://github.com/DillFennel/PPTX_PDF_text_bot"
-                >github.com/DillFennel/PPTX_PDF_text_bot</a
-              >
-            </p>
-          </article>
-          <article class="card">
-            <h3>Учебный проект · Дерево решений для прогноза отмены брони</h3>
-            <p class="meta">2025 · Python</p>
-            <p>
-              Проект решает задачу бинарной классификации: 
-              по параметрам бронирования нужно определить, 
-              будет ли отмена (is_canceled = 1) или нет (is_canceled = 0)
-            </p>
-            <p class="meta">
-              <a href="https://github.com/DillFennel/Hotels_decisionTree"
-                >github.com/DillFennel/Hotels_decisionTree</a
-              >
-            </p>
-          </article>
         </div>
+        <figure class="hero__photo">
+          <img
+            src="data/avatar/Селфи.jpg"
+            alt="Портрет Юлии Петрушиной"
+          />
+        </figure>
+      </header>
 
-        <div>
+      <main class="layout">
+        <section class="layout__about">
+          <h2>Обо мне</h2>
+          <article class="card card--about">
+            <p>
+              Студент-разработчик, сфокусирована на бэкенд-разработке на C++.
+              Имею практический опыт работы в ИСП РАН.
+              Прошла Летнюю школу Яндекса (Школу бэкенд-разработки на C++),
+              где разрабатывали асинхронные сервисы на фреймворке Userver.
+              Также владею сопутствующими технологиями:
+              Python, SQL/NoSQL базы данных, Git, Linux и Docker.
+            </p>
+          </article>
+        </section>
+
+        <section class="layout__skills">
           <h2>Навыки</h2>
           <ul class="skills">
             <li>C++, Python</li>
-            <li>Yosys, OpenROAD</li>
             <li>Git, GitHub</li>
             <li>Docker</li>
             <li>Linux, Bash</li>
@@ -130,13 +66,80 @@
             <li>SQL, PostgreSQL, MySQL, Microsoft SQL Server</li>
             <li>MongoDB</li>
           </ul>
+        </section>
 
+        <section class="layout__experience">
+          <h2>Опыт работы</h2>
+
+          <article class="timeline-item">
+            <header>
+              <div>
+                <h3>Лаборант в научной лаборатории "Гетерогенных компьютерных систем". ИСП РАН</h3>
+                <p class="meta">2024 — н.в.</p>
+              </div>
+              <p class="meta">C++, Python, Bash, Yosys, OpenROAD</p>
+            </header>
+            <ul>
+              <li>Формализация и алгоритмизация поставленных задач, в основном связаных с EDA (Electronic Design Automation) и ПО для логического синтеза и верификации конструкций цифрового оборудования</li>
+              <li>Написание программного кода, в основном на C++</li>
+              <li>Проверка и отладка программного кода</li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="layout__projects">
+          <h2>Проекты</h2>
+          <div class="layout__projects-list">
+            <article class="card">
+              <h3>Личный проект · GeoAnalysis</h3>
+              <p class="meta">2024 · Python</p>
+              <p>
+                Основной функционал — анализ данных из открытых источников с использованием библиотеки Pandas.
+                Программа позволяет получить данные по хексагонам по заданым координатам.
+              </p>
+              <p class="meta">
+                <a href="https://github.com/DillFennel/GeoAnalysis"
+                  >github.com/DillFennel/GeoAnalysis</a
+                >
+              </p>
+            </article>
+            <article class="card">
+              <h3>Личный проект · PPTX_PDF_text_bot</h3>
+              <p class="meta">2025 · Python</p>
+              <p>
+                Бот в Telegram для работы с PPTX и PDF файлами, позволяющий извлекать текст из файлов и сохранять его в текстовый файл.
+              </p>
+              <p class="meta">
+                <a href="https://github.com/DillFennel/PPTX_PDF_text_bot"
+                  >github.com/DillFennel/PPTX_PDF_text_bot</a
+                >
+              </p>
+            </article>
+            <article class="card">
+              <h3>Учебный проект · Дерево решений для прогноза отмены брони</h3>
+              <p class="meta">2025 · Python</p>
+              <p>
+                Проект решает задачу бинарной классификации: по параметрам бронирования нужно определить,
+                будет ли отмена (is_canceled = 1) или нет (is_canceled = 0).
+              </p>
+              <p class="meta">
+                <a href="https://github.com/DillFennel/Hotels_decisionTree"
+                  >github.com/DillFennel/Hotels_decisionTree</a
+                >
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="layout__education">
           <h2>Образование</h2>
           <article class="card">
             <h3>РЭУ им. Г. В. Плеханова</h3>
             <p class="meta">Бакалавриат · Информатика и вычислительная техника · 2023 — 2027</p>
           </article>
+        </section>
 
+        <section class="layout__certificates">
           <h2>Сертификаты</h2>
           <div class="certificates">
             <a
@@ -158,12 +161,12 @@
               </div>
             </a>
           </div>
-        </div>
-      </section>
-    </main>
-    <footer class="footer">
-      <p>Последнее обновление: ноябрь 2025</p>
-    </footer>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>Последнее обновление: ноябрь 2025</p>
+      </footer>
+    </div>
   </body>
 </html>
-
