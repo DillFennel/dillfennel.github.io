@@ -449,6 +449,44 @@ p {
     gap: 1.8mm;
   }
 
+  .layout__education .card {
+    padding: 2mm 3mm;
+    border-radius: 14px;
+  }
+
+  .layout__education .card h3 {
+    font-size: 11.2px;
+    margin-bottom: 1.2mm;
+  }
+
+  .layout__education .meta {
+    font-size: 9.2px;
+    margin-top: 0.6mm;
+  }
+
+  .layout__certificates {
+    gap: 1.6mm;
+  }
+
+  .certificate-card {
+    padding: 1.6mm;
+    border-radius: 14px;
+  }
+
+  .certificate-card__preview {
+    max-height: 32mm;
+    width: min(30vw, 40mm);
+    border-radius: 10px;
+  }
+
+  .certificate-card__info {
+    gap: 1.2mm;
+  }
+
+  .certificate-card__title {
+    font-size: 11.2px;
+  }
+
   .hero {
     padding: 4mm 0 4mm;
     gap: 4mm;
