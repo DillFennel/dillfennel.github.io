@@ -119,7 +119,7 @@ a:focus {
   flex-wrap: wrap;
   gap: 1.8mm;
   color: var(--muted);
-  font-size: 9.5px;
+  font-size: 10.5px;
   margin-bottom: 2mm;
 }
 
@@ -294,7 +294,7 @@ p {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 8.8px;
+  font-size: 9.8px;
   gap: 1mm;
 }
 
