@@ -431,6 +431,7 @@ p {
 
   .layout__skills {
     grid-area: skills;
+    align-content: start;
   }
 
   .layout__experience {
@@ -544,6 +545,7 @@ p {
   }
 
   .layout__skills .skills {
+    align-self: start;
     justify-content: center;
   }
 
