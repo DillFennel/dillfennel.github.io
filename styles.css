@@ -444,6 +444,7 @@ p {
 
   .layout__education {
     grid-area: education;
+    align-content: start;
   }
 
   .layout__certificates {
@@ -458,6 +459,7 @@ p {
   .layout__education .card {
     padding: 2mm 3mm;
     border-radius: 14px;
+    align-self: start;
   }
 
   .layout__education .card h3 {
