@@ -25,7 +25,7 @@
 body {
   margin: 0;
   font-family: var(--font-family);
-  padding: clamp(24px, 6vw, 72px);
+  padding: clamp(16px, 5vw, 48px);
   box-sizing: border-box;
   background:
     radial-gradient(120% 80% at 10% 10%, rgba(148, 167, 255, 0.28), transparent 60%),
@@ -43,10 +43,10 @@ body {
 body::before {
   content: "";
   position: absolute;
-  top: clamp(12px, 5vw, 40px);
-  right: clamp(12px, 5vw, 40px);
-  bottom: clamp(12px, 5vw, 40px);
-  left: clamp(12px, 5vw, 40px);
+  top: clamp(10px, 4.5vw, 32px);
+  right: clamp(10px, 4.5vw, 32px);
+  bottom: clamp(10px, 4.5vw, 32px);
+  left: clamp(10px, 4.5vw, 32px);
   border-radius: clamp(16px, 6vw, 28px);
   border: 2px solid rgba(38, 82, 255, 0.14);
   pointer-events: none;
