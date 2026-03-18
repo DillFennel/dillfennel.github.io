@@ -329,7 +329,7 @@ p {
 }
 
 .certificate-card__preview {
-  width: min(38vw, 30mm);
+  width: min(38vw, 48mm);
   height: auto;
   max-height: 40mm;
   display: block;
