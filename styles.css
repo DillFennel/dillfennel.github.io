@@ -482,8 +482,8 @@ p {
   }
 
   .certificate-card__preview {
-    max-height: 32mm;
-    width: min(30vw, 40mm);
+    max-height: 28mm;
+    width: auto;
     border-radius: 10px;
   }
 
