@@ -399,125 +399,6 @@ p {
   margin: 0;
 }
 
-@media print {
-  body {
-    padding: 0;
-    background: none;
-    font-size: 11px;
-  }
-
-  .page {
-    box-shadow: none;
-    border-radius: 0;
-    width: 210mm;
-    height: 297mm;
-    padding: 9mm 8mm;
-    max-width: none;
-  }
-
-  .layout {
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-      "about skills"
-      "experience experience"
-      "projects projects"
-      "education certificates";
-    gap: 2.6mm;
-  }
-
-  .layout__about {
-    grid-area: about;
-  }
-
-  .layout__skills {
-    grid-area: skills;
-    align-content: start;
-  }
-
-  .layout__experience {
-    grid-area: experience;
-  }
-
-  .layout__projects {
-    grid-area: projects;
-  }
-
-  .layout__education {
-    grid-area: education;
-    align-content: start;
-  }
-
-  .layout__certificates {
-    grid-area: certificates;
-  }
-
-  .layout__projects-list {
-    grid-template-columns: 1fr;
-    gap: 1.8mm;
-  }
-
-  .layout__education .card {
-    padding: 2mm 3mm;
-    border-radius: 14px;
-    align-self: start;
-  }
-
-  .layout__education .card h3 {
-    font-size: 11.2px;
-    margin-bottom: 1.2mm;
-  }
-
-  .layout__education .meta {
-    font-size: 9.2px;
-    margin-top: 0.6mm;
-  }
-
-  .layout__certificates {
-    gap: 1.6mm;
-  }
-
-  .certificate-card {
-    padding: 1.6mm;
-    border-radius: 14px;
-  }
-
-  .certificate-card__preview {
-    max-height: 20mm;
-    width: auto;
-    border-radius: 10px;
-  }
-
-  .certificate-card__info {
-    gap: 1.2mm;
-  }
-
-  .certificate-card__title {
-    font-size: 11.2px;
-  }
-
-  .hero {
-    padding: 4mm 0 4mm;
-    gap: 4mm;
-  }
-
-  .hero__photo {
-    width: 42mm;
-    padding: 1.2mm;
-  }
-
-  .hero__photo img {
-    border-radius: 24px;
-  }
-
-  .hero__name {
-    font-size: 22px;
-  }
-
-  .hero__title {
-    font-size: 13px;
-  }
-}
-
 @media (max-width: 640px) {
   .hero {
     flex-direction: column;
@@ -670,3 +551,175 @@ p {
   font-size: 9px;
 }
 
+/* ========== МЕДИА-ЗАПРОС ДЛЯ ПЕЧАТИ (В САМОМ КОНЦЕ) ========== */
+@media print {
+  body {
+    padding: 0;
+    background: none;
+    font-size: 11px;
+  }
+
+  .page {
+    box-shadow: none;
+    border-radius: 0;
+    width: 210mm;
+    height: 297mm;
+    padding: 9mm 8mm;
+    max-width: none;
+    overflow: hidden; /* гарантированно обрезаем лишнее */
+  }
+
+  .layout {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "about skills"
+      "experience experience"
+      "projects projects"
+      "education certificates";
+    gap: 2mm; /* немного уменьшил вертикальные отступы между секциями */
+  }
+
+  .layout__about {
+    grid-area: about;
+  }
+
+  .layout__skills {
+    grid-area: skills;
+    align-content: start;
+  }
+
+  .layout__experience {
+    grid-area: experience;
+  }
+
+  .layout__projects {
+    grid-area: projects;
+  }
+
+  .layout__education {
+    grid-area: education;
+    align-content: start;
+  }
+
+  .layout__certificates {
+    grid-area: certificates;
+  }
+
+  .layout__projects-list {
+    grid-template-columns: 1fr;
+    gap: 1.6mm;
+  }
+
+  .layout__education .card {
+    padding: 1.8mm 2.5mm; /* чуть уменьшил */
+    border-radius: 14px;
+    align-self: start;
+  }
+
+  .layout__education .card h3 {
+    font-size: 11px;
+    margin-bottom: 1mm;
+  }
+
+  .layout__education .meta {
+    font-size: 9px;
+    margin-top: 0.5mm;
+  }
+
+  .layout__certificates {
+    gap: 1.6mm;
+  }
+
+  .certificate-card {
+    padding: 1.4mm;
+    border-radius: 14px;
+    gap: 1.5mm;
+  }
+
+  .certificate-card__preview {
+    max-height: 18mm; /* уменьшил для экономии места */
+    width: auto;
+    border-radius: 10px;
+  }
+
+  .certificate-card__info {
+    gap: 1mm;
+  }
+
+  .certificate-card__title {
+    font-size: 10.5px; /* чуть меньше */
+  }
+
+  .hero {
+    padding: 4mm 0 3.5mm;
+    gap: 4mm;
+  }
+
+  .hero__photo {
+    width: 40mm; /* немного уменьшил */
+    padding: 1mm;
+  }
+
+  .hero__photo img {
+    border-radius: 20px;
+  }
+
+  .hero__name {
+    font-size: 21px; /* чуть меньше */
+  }
+
+  .hero__title {
+    font-size: 12.5px;
+  }
+
+  .hero__contacts {
+    font-size: 10px;
+    gap: 1.5mm;
+  }
+
+  .skills--languages li {
+    font-size: 9px;
+    padding: 0.7mm 1.6mm;
+  }
+
+  .timeline-item {
+    padding: 1.8mm 2.8mm; /* уменьшил */
+    border-radius: 16px;
+  }
+
+  .timeline-item h3 {
+    font-size: 11.5px;
+  }
+
+  .timeline-item .meta {
+    font-size: 8.8px;
+  }
+
+  .timeline-item ul {
+    padding-left: 2.2mm;
+  }
+
+  .timeline-item li {
+    font-size: 10px;
+  }
+
+  .card {
+    padding: 1.8mm 2.8mm;
+    border-radius: 16px;
+  }
+
+  .card h3 {
+    font-size: 11px;
+    margin-bottom: 1mm;
+  }
+
+  .card p {
+    font-size: 9.5px;
+    margin-bottom: 0.8mm;
+  }
+
+  .footer {
+    padding: 1.5mm 0 0;
+    font-size: 9px;
+  }
+}
