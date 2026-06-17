@@ -388,7 +388,7 @@ p {
 }
 
 .footer {
-  padding: 2.4mm 0 0;
+  padding: 0;
   text-align: center;
   color: var(--muted);
   font-size: 9.8px;
@@ -451,7 +451,7 @@ p {
 
 @media (min-width: 880px) {
   .layout {
-    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    grid-template-columns: minmax(0, 1.45fr) minmax(0, 0.95fr);
     grid-template-areas:
       "about skills"
       "experience experience"
