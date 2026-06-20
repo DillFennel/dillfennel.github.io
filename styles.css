@@ -457,7 +457,7 @@ p {
   article.timeline-item,
   .layout__experience .timeline-item,
   .layout__projects-list .card {
-    padding: 22px 24px !important;
+    padding: 22px 24px !important; /* Для отступов по краям */
   }
 
   .certificate-card {
