@@ -401,11 +401,30 @@ p {
 }
 
 @media (max-width: 640px) {
+  .layout,
+  .hero {
+    min-width: 0;
+  }
+
+  .layout > section,
+  .card,
+  .timeline-item {
+    min-width: 0;
+  }
+
+  .layout__projects-list .card {
+    overflow-x: auto;
+  }
+
+  .layout__projects-list .card table {
+    min-width: 560px;
+  }
+
   .hero {
     flex-direction:column;
     align-items:start;
     text-align:left;
-    padding: 20px 18px 16px;
+    padding: 12px 0 16px;
     gap: 18px;
   }
 
@@ -436,12 +455,13 @@ p {
   .page {
     width: 100%;
     max-width: 100%;
-    padding: 4mm 3mm;
+    padding: 12mm;
     min-height: auto;
     box-sizing: border-box;
-    background: rgba(255, 255, 255, 0); /* прозрачное */
+    background: rgba(255, 255, 255, 0.65); /* прозрачное */
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
+    overflow-x: hidden;
   }
 
   body {
@@ -450,7 +470,7 @@ p {
   }
 
   .layout {
-    padding: 0 18px 20px;
+    padding: 0;
   }
 
   .layout__projects-list,
