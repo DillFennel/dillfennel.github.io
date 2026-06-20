@@ -433,9 +433,24 @@ p {
     width: 70%;
   }
 
+  .page {
+    width: 100%;
+    max-width: 100%;
+    padding: 4mm 3mm;
+    min-height: auto;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+
+  body {
+    padding: 0;
+    overflow-x: hidden;
+  }
+
   .layout {
-    flex: auto;
-    padding: 20px 18px 20px;
+    padding: 0 18px 20px;
   }
 
   .layout__projects-list,
@@ -457,7 +472,7 @@ p {
   article.card,
   article.timeline-item,
   .layout__experience .timeline-item,
-  .layout__projects-list .card { /* Все текстовые блоки */
+  .layout__projects-list .card {
     padding: 22px 24px !important; /* Для отступов по краям */
   }
 
