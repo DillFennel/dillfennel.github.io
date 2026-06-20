@@ -543,7 +543,7 @@ p {
 }
 
 .layout__projects-list .card p {
-  font-size: 9.6px;
+  font-size: 11px;
   margin: 0 0 1.1mm;
 }
 
@@ -728,7 +728,7 @@ p {
   width: 100%;
   border-collapse: collapse;
   margin-top: 1.4mm;
-  font-size: 9.2px;
+  font-size: 10px;
   background: var(--card-bg);
   border-radius: 12px;
   overflow: hidden;
@@ -747,7 +747,7 @@ p {
   background: var(--accent-soft);
   color: var(--accent);
   font-weight: 600;
-  font-size: 8.8px;
+  font-size: 10px;
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
