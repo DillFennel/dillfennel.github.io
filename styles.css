@@ -402,21 +402,35 @@ p {
 
 @media (max-width: 640px) {
   .hero {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    flex-direction:column;
+    align-items:start;
+    text-align:left;
     padding: 20px 18px 16px;
     gap: 18px;
   }
 
+  .hero__tag {
+    align-items: center;
+    padding: 0mm 2mm;
+  }
+  
+
   .hero__content {
     display: grid;
-    justify-items: center;
-    gap: 12px;
+    justify-items: left;
+    gap: 1px;
+    flex: 1 1 42px;
   }
 
   .hero__contacts {
-    justify-content: center;
+    justify-content: left;
+  }
+
+  .hero__photo {
+    align-self: center;
+    margin-left: 0;
+    margin-right: 0;
+    width: 70%;
   }
 
   .layout {
@@ -439,12 +453,21 @@ p {
     padding: 18px;
   }
 
+  article.card,
+  article.timeline-item,
+  .layout__experience .timeline-item,
+  .layout__projects-list .card {
+    padding: 22px 24px !important;
+  }
+
   .certificate-card {
     flex-direction: column;
+    align-items: center;
   }
 
   .certificate-card__preview {
-    width: 100%;
+    align-self: center;
+    width: 40%;
     height: auto;
     max-height: none;
   }
