@@ -434,7 +434,8 @@ p {
   }
 
   .layout {
-    padding: 0 18px 20px;
+    flex: auto;
+    padding: 20px 18px 20px;
   }
 
   .layout__projects-list,
