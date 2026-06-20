@@ -306,6 +306,12 @@ p {
   margin-left: 0;
 }
 
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 .certificates {
   display: grid;
   gap: 3mm;
