@@ -470,7 +470,7 @@ p {
   }
 
   .layout {
-    padding: 0;
+    padding: 0; /* чтобы не вылезало за рамки*/
   }
 
   .layout__projects-list,
