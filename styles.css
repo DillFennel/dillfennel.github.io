@@ -44,14 +44,15 @@ body {
 
 .page {
   width: 210mm;
-  height: 297mm;
+  min-height: 297mm;
+  height: auto;
   background: var(--card-bg);
   padding: 9mm 8mm;
   box-shadow: var(--shadow);
   position: relative;
   box-sizing: border-box;
   margin: 0 auto;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .page::before {
@@ -487,7 +488,6 @@ p {
   }
 
   .layout__projects-list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
     column-gap: 2.4mm;
   }
 }
@@ -563,10 +563,9 @@ p {
     box-shadow: none;
     border-radius: 0;
     width: 210mm;
-    height: 297mm;
+    height: auto;
     padding: 9mm 8mm;
     max-width: none;
-    overflow: hidden; /* гарантированно обрезаем лишнее */
   }
 
   .layout {
@@ -576,7 +575,7 @@ p {
       "experience experience"
       "projects projects"
       "education certificates";
-    gap: 2mm; /* немного уменьшил вертикальные отступы между секциями */
+    gap: 2mm;
   }
 
   .layout__about {
@@ -606,12 +605,11 @@ p {
   }
 
   .layout__projects-list {
-    grid-template-columns: 1fr;
     gap: 1.6mm;
   }
 
   .layout__education .card {
-    padding: 1.8mm 2.5mm; /* чуть уменьшил */
+    padding: 1.8mm 2.5mm;
     border-radius: 14px;
     align-self: start;
   }
@@ -637,7 +635,7 @@ p {
   }
 
   .certificate-card__preview {
-    max-height: 18mm; /* уменьшил для экономии места */
+    max-height: 18mm;
     width: auto;
     border-radius: 10px;
   }
@@ -647,7 +645,7 @@ p {
   }
 
   .certificate-card__title {
-    font-size: 10.5px; /* чуть меньше */
+    font-size: 10.5px;
   }
 
   .hero {
@@ -656,7 +654,7 @@ p {
   }
 
   .hero__photo {
-    width: 40mm; /* немного уменьшил */
+    width: 40mm;
     padding: 1mm;
   }
 
@@ -665,7 +663,7 @@ p {
   }
 
   .hero__name {
-    font-size: 21px; /* чуть меньше */
+    font-size: 21px;
   }
 
   .hero__title {
@@ -683,7 +681,7 @@ p {
   }
 
   .timeline-item {
-    padding: 1.8mm 2.8mm; /* уменьшил */
+    padding: 1.8mm 2.8mm;
     border-radius: 16px;
   }
 
@@ -721,5 +719,67 @@ p {
   .footer {
     padding: 1.5mm 0 0;
     font-size: 9px;
+  }
+}
+
+/* Стили для таблиц */
+
+.layout__projects-list .card table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.4mm;
+  font-size: 9.2px;
+  background: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.layout__projects-list .card th,
+.layout__projects-list .card td {
+  border: 1px solid var(--border);
+  padding: 1.2mm 1.8mm;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.layout__projects-list .card th {
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 8.8px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.layout__projects-list .card td {
+  background: var(--card-bg);
+  color: var(--text);
+}
+
+.layout__projects-list .card tbody tr:nth-child(even) td {
+  background: rgba(38, 82, 255, 0.03);
+}
+
+@media (max-width: 640px) {
+  .layout__projects-list .card table {
+    font-size: 8px;
+  }
+  .layout__projects-list .card th,
+  .layout__projects-list .card td {
+    padding: 1mm 1.2mm;
+  }
+}
+
+@media print {
+  .layout__projects-list .card table {
+    font-size: 8.5px;
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+  .layout__projects-list .card th,
+  .layout__projects-list .card td {
+    border-color: #aaa;
+    padding: 0.8mm 1.2mm;
   }
 }
