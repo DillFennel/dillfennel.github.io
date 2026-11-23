@@ -1,224 +1,156 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Резюме — Петрушина Юлия Дмитриевна</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="page">
-      <header class="hero">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Юлия Петрушина — бэкенд-разработчик C++. Опыт в Яндекс Go Payments, рекламной инфраструктуре Яндекса и ИСП РАН. userver, Python, надёжность сервисов. Ищу команду для работы в штате.">
+  <meta name="theme-color" content="#2347df">
+  <meta property="og:type" content="profile">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="Юлия Петрушина — бэкенд-разработчик C++">
+  <meta property="og:description" content="Платёжный бэкенд, инфраструктура и C++. Опыт в Яндексе и ИСП РАН, диплом с командой YDB. Открыта к предложениям в штат.">
+  <meta property="og:url" content="https://dillfennel.github.io/">
+  <meta property="og:image" content="https://dillfennel.github.io/data/avatar/%D0%A1%D0%B5%D0%BB%D1%84%D0%B8.jpg">
+  <meta property="og:image:alt" content="Юлия Петрушина">
+  <link rel="canonical" href="https://dillfennel.github.io/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=20261124">
+  <title>Юлия Петрушина — бэкенд-разработчик C++</title>
+</head>
+<body>
+  <a class="skip-link" href="#experience">Перейти к опыту работы</a>
+  <div class="page">
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="Юлия Петрушина — в начало">ЮП<span aria-hidden="true">.</span></a>
+      <nav aria-label="Основная навигация">
+        <a href="#experience">Опыт</a>
+        <a href="#projects">Проекты</a>
+        <a href="#education">Образование</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+      <a class="header-pdf" href="data/resume/yulia-petrushina-cpp.pdf" download>Резюме PDF</a>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="name">
         <div class="hero__content">
-          <p class="hero__tag">Резюме</p>
-          <h1 class="hero__name">Петрушина Юлия Дмитриевна</h1>
-          <p class="hero__title">Бэкенд-разработчик</p>
-          <div class="hero__contacts">
-            <a href="mailto:dillfennelsch@gmail.com">dillfennelsch@gmail.com</a>
-            <span>·</span>
-            <a href="https://github.com/dillfennel">github.com/dillfennel</a>
-            <span>·</span>
-            <a href="https://t.me/dillfennel">t.me/dillfennel</a>
-            <span>·</span>
-            <span>Москва, Россия</span>
+          <p class="eyebrow">C++ · Backend · Infrastructure</p>
+          <h1 id="name">Юлия<br> Петрушина</h1>
+          <p class="hero__role">Бэкенд-разработчик C++</p>
+          <p class="hero__intro">Разрабатываю платёжный бэкенд и инфраструктурные компоненты. Опыт в Яндекс Go Payments, рекламной инфраструктуре Яндекса и ИСП РАН.</p>
+          <p class="hero__focus">Мне интересны задачи, где важны производительность, надёжность и понятное поведение системы.</p>
+          <div class="hero__actions">
+            <a class="button button--primary" href="https://t.me/dillfennel">Обсудить вакансию</a>
+            <a class="button button--secondary" href="data/resume/yulia-petrushina-cpp.pdf" download>Скачать резюме PDF</a>
           </div>
-          <ul class="skills skills--languages">
-            <li>Английский — Upper Intermediate (B2)</li>
-          </ul>
+          <p class="availability"><span class="status-dot" aria-hidden="true"></span>Рассматриваю предложения в штат <span class="separator">·</span> Москва</p>
+          <p class="print-contact">dillfennelsch@gmail.com · t.me/dillfennel · github.com/dillfennel</p>
         </div>
-        <figure class="hero__photo">
-          <img
-            src="data/avatar/Селфи.jpg"
-            alt="Портрет Юлии Петрушиной"
-          />
+        <figure class="portrait">
+          <div class="portrait__frame"><img src="data/avatar/Селфи.jpg" alt="Юлия Петрушина" width="720" height="720" fetchpriority="high"></div>
+          <figcaption><span>C++ / userver / Python</span></figcaption>
         </figure>
-      </header>
+      </section>
 
-      <main class="layout">
-        <section class="layout__about">
-          <h2>Обо мне</h2>
-          <article class="card card--about">
-            <p>
-              Привет, я backend-разработчик с опытом работы в высоконагруженных системах (стажировка в Яндекс).
-              Сфокусирована на бэкенд-разработке на C++, также интересуюсь Data Science и ML.
-            </p>
-            <p>
-              Имею практический опыт работы в ИСП РАН, прошла стажировку в Яндексе в роли бэкенд-разработчика с положительным фидбеком.
-              Окончила Летнюю школу Яндекса по бэкенд-разработке на C++, где работала над асинхронными сервисами на фреймворке Userver.
-            </p>
-            <p>
-              Сейчас ищу команду, где смогу решать амбициозные инфраструктурные задачи и учиться у сильных коллег.
-              Хочу развиваться в области инфраструктурных решений, где важен контроль над производительностью и надежностью.
-              Легко адаптируюсь, люблю систематизацию и работать в команде.
-            </p>
-            <p>
-              В свободное время увлекаюсь компьютерными играми и рисованием :)
-            </p>
-          </article>
-        </section>
+      <section class="skills-section" aria-labelledby="skills-title">
+        <h2 id="skills-title" class="section-kicker">Технологии и практика</h2>
+        <dl class="skills-grid">
+          <div><dt>Разработка</dt><dd>C++, STL, Python, userver<br>Многопоточное программирование, HTTP API</dd></div>
+          <div><dt>Инструменты и данные</dt><dd>Linux, Bash, Git, Docker<br>SQL, PostgreSQL, MongoDB</dd></div>
+          <div><dt>Качество и эксплуатация</dt><dd>Автоматизированное тестирование<br>Метрики, мониторинг, проверка миграций</dd></div>
+        </dl>
+        <p class="language-note">Английский — B2 (Upper Intermediate)</p>
+      </section>
 
-        <section class="layout__skills">
-          <h2>Навыки</h2>
-          <ul class="skills">
-            <li>C++, Python</li>
-            <li>Git, GitHub</li>
-            <li>Docker</li>
-            <li>Linux, Bash</li>
-            <li>Сетевые протоколы: TCP/IP, HTTP, HTTPS</li>
-            <li>SQL, PostgreSQL, MySQL, Microsoft SQL Server</li>
-            <li>MongoDB</li>
-          </ul>
-        </section>
-
-        <section class="layout__experience">
-          <h2>Опыт работы</h2>
-
-          <article class="timeline-item">
-            <header>
-              <div>
-                <h3>C++ Developer / Research Assistant. Научная лаборатория "Гетерогенных компьютерных систем". ИСП РАН</h3>
-                <p class="meta">2024 — 2025</p>
-              </div>
-              <p class="meta">C++, Python, Bash, Yosys, OpenROAD</p>
-            </header>
-            <ul>
-              <li>Формализация и алгоритмизация поставленных задач, в основном связанных с EDA (Electronic Design Automation) и ПО для логического синтеза и верификации конструкций цифрового оборудования: внедрила поддержку графов в формате AIG, что позволило расширить возможности обработки продукта. Также внедрила метод ретайминга Precision Synthesis, что позволило оптимизировать итоговые схемы.</li>
-              <li>Проверка и отладка программного кода: написала тесты на Python для компонента, что позволило автоматизировать его тестирование</li>
-              <li>Написание программного кода, в основном на C++</li>
-            </ul>
+      <section class="section experience" id="experience" aria-labelledby="experience-title">
+        <div class="section-heading"><h2 id="experience-title">Опыт работы</h2><p>От инфраструктуры рекламного движка<br class="desktop-break"> до платёжных сервисов</p></div>
+        <div class="experience-list">
+          <article class="job">
+            <div class="job__when"><p><time datetime="2026-08">Август 2026</time><br>— настоящее время</p><span class="label">Сейчас</span></div>
+            <div class="job__body">
+              <header class="job__header"><h3>Яндекс Go Payments</h3><p class="job__role">Стажёр-разработчик бэкенда</p><p class="stack">C++ · Python · userver</p></header>
+              <p class="job__context">Способы оплаты, погашение долгов и мониторинг платежей.</p>
+              <ul class="achievements">
+                <li><strong>Подключение способов оплаты через конфигурацию.</strong> Реализовала добавление новых типов поддерживаемого формата без отдельных изменений кода под каждый тип. Расширила API и проверила совместимость и полный сценарий на тестовом окружении.</li>
+                <li><strong>Общая C++-библиотека способов оплаты.</strong> Унифицировала правила смены метода, отделила общую доступность от возможности оформить заказ. Добавила серверные проверки и сравнивала новую логику со старой в режиме dry-run.</li>
+                <li><strong>API погашения долгов.</strong> Перенесла расчёт списка долгов для выбранного способа оплаты на сервер. Сохранила совместимость со старыми клиентами и ограничила число запросов к зависимым сервисам.</li>
+                <li><strong>Наблюдаемость платежей.</strong> Переработала дашборды платежей, долгов, чаевых и верификаций для двух контуров. Реализовала базовый сбор метрик отдельных транзакций и позиций счёта; ошибки сбора не прерывают обработку платежа.</li>
+                <li><strong>Бот сводок по инцидентам с LLM.</strong> Разработала отбор платёжных инцидентов, подготовку сводок для продуктовых менеджеров, обновление карточек и защиту от повторных отправок. Развернула бота в тестовом окружении.</li>
+              </ul>
+            </div>
           </article>
 
-          <article class="timeline-item">
-            <header>
-              <div>
-                <h3>Стажер-разработчик в Группе инфраструктурной разработки Новой БК. Яндекс.Технологии</h3>
-                <p class="meta">16.12.2025 — 16.04.2026</p>
-              </div>
-              <p class="meta">C++, STL, Многопоточное программирование, Linux, Python</p>
-            </header>
-            <ul>
-              <li>Развивала функциональность инфраструктурных компонентов рекламного движка: разделила сорсы на стабильные и тестируемые, что позволило изолировать тестовый трафик и ускорить цикл регрессионного тестирования на 30% без влияния на продакшн-метрики</li>
-              <li>Оптимизировала логику рантайма: объединила два последовательных стейджа, убрав избыточный слой. В результате снизила потребление CPU и RAM на 40-50%, а также сократила сетевой трафик, проведя поэтапное переключение трафика с контролем метрик.</li>
-              <li>Искала точки роста, оценивала риски, влияла на организационные и технические решения для обеспечения стабильности и надёжности сервиса: внедрила новые метрики для сервиса, провела несколько встреч для согласования эксперимента, обменивалась опытом по работе с инструментами и технологиями с коллегами.</li>
-            </ul>
+          <article class="job">
+            <div class="job__when"><p><time datetime="2025-12">Декабрь 2025</time><br>— <time datetime="2026-04">апрель 2026</time></p></div>
+            <div class="job__body">
+              <header class="job__header"><h3>Яндекс Технологии</h3><p class="job__role">Стажёр-разработчик C++ · Инфраструктура Новой БК</p><p class="stack">C++ · Python · Linux · Protobuf</p></header>
+              <p class="job__context">Инфраструктурные компоненты рекламного движка.</p>
+              <ul class="achievements">
+                <li><strong>Перенос инфраструктурного компонента на C++.</strong> Переписала компонент Rooster; изменения влиты в основную кодовую базу.</li>
+                <li><strong>Корректная проверка новых версий.</strong> Исправила выбор stable/prestable при обращении к нескольким шардам: в рамках одного вызова используется одно окружение, без смешивания стабильной и тестируемой версий.</li>
+                <li><strong>Упрощение архитектуры кешей.</strong> Участвовала в переходе RTB-cache и cache-proxy к одному стейджу без proxy-слоя: подготовила переключение запросов и эксперимент, удалила завершённую экспериментальную логику.</li>
+                <li><strong>Развёртывание и сопровождение.</strong> Подготовила Infractl-конфигурации для кешей и Metronome, добавила XGen в Metronome и удалила устаревшие конфигурации деплоя.</li>
+                <li><strong>Метрики и проверки.</strong> Добавила HTTP/HTTPS-метрики и тесты инфраструктурного компонента. Перенесла метаданные тегов в protobuf extensions и расширила проверки новых тегов.</li>
+              </ul>
+            </div>
           </article>
-        </section>
 
-        <section class="layout__projects">
-          <h2>Проекты и научные статьи</h2>
-          <div class="layout__projects-list">
-            <article class="card">
-              <h3>Научная статья · Анализ цифровых решений для обеспечения отказоустойчивости бизнеса при перебоях с доступом в глобальную сеть</h3>
-              <p class="meta">2026 · Конференция «XXXIX Международные Плехановские Чтения»</p>
-              <p>
-                Целью работы является анализ цифровых решений и предложение архитектурных стратегий адаптации ПО и сетей к деградации глобального Интернета
-              </p>
-              <p>
-                <b>Аннотация:</b> 
-                В статье рассматривается проблема обеспечения непрерывности бизнеса в условиях ограничения доступа к сети Интернет на фоне критической зависимости современных предприятий от ИТ-инфраструктуры. 
-                Анализируются риски для компаний, а также предлагаются меры адаптации. 
-                Делается вывод о необходимости подготовки к новым рискам для сохранения устойчивости.
-              </p>
-              <p>
-                <b>Ключевые слова:</b> 
-                устойчивость бизнеса, непрерывность бизнеса, непрерывность ИТ-сервисов, Интернет, ограничение доступа. 
-              </p>
-            </article>
-            <article class="card">
-              <h3>Учебный проект · Случайный лес и дерево решений для прогноза отмены брони</h3>
-              <p class="meta">2025 · Python</p>
-              <p class="meta">
-                <a href="https://github.com/DillFennel/Hotels_decisionTree"
-                  >github.com/DillFennel/Hotels_decisionTree</a
-                >
-              </p>
-              <p>
-                Проект решает задачу бинарной классификации: по параметрам бронирования нужно определить,
-                будет ли отмена (is_canceled = 1) или нет (is_canceled = 0).
-                Проект рассчитан на анализ факторов, влияющих на отмену бронирований, и сравнительное тестирование деревьев решений и случайного леса.
-              </p>
-              <p>
-                Всего 44 638 записей и 29 исходных признаков, включая данные о дате прибытия, количестве гостей, типах номеров, сегменте рынка и т.д.
-                Целевая переменная is_canceled.
-                Были проведены предварительный анализ и подготовка данных.
-              </p>
-              <p>
-                <b>Стек:</b> Python, pandas, matplotlib, scikit-learn.
-              </p>
-              <div class="table-scroll">
-                <table>
-                    <tr>
-                        <th>Модель</th>
-                        <th>Accuracy</th>
-                        <th>Precision</th>
-                        <th>Recall</th>
-                        <th>FPR</th>
-                        <th>ROC-AUC</th>
-                    </tr>
-                    <tr>
-                        <td>RandomForestClassifier</td>
-                        <td>0.8613</td>
-                        <td>0.8471</td>
-                        <td>0.6536</td>
-                        <td>0.0502</td>
-                        <td>0.8017</td>
-                    </tr>
-                    <tr>
-                        <td>DecisionTreeClassifier</td>
-                        <td>0.8174</td>
-                        <td>0.6892</td>
-                        <td>0.7077</td>
-                        <td>0.1359</td>
-                        <td>0.7859</td>
-                    </tr>
-                </table>
-              </div>
-            </article>
+          <article class="job">
+            <div class="job__when"><p>2024 — 2025</p></div>
+            <div class="job__body">
+              <header class="job__header"><h3>ИСП РАН</h3><p class="job__role">C++ Developer / Research Assistant</p><p class="stack">C++ · Python · Bash · Yosys · OpenROAD</p></header>
+              <p class="job__context">Лаборатория гетерогенных компьютерных систем. ПО для автоматизации проектирования цифровых схем.</p>
+              <ul class="achievements">
+                <li>Добавила поддержку графов в формате AIG и метод ретайминга Precision Synthesis для обработки и оптимизации цифровых схем.</li>
+                <li>Автоматизировала тестирование компонента с помощью тестов на Python.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading"><h2 id="projects-title">Проекты и исследования</h2><p>Диплом с YDB и работы за пределами стажировок</p></div>
+        <article class="featured-project">
+          <div class="featured-project__meta"><p class="eyebrow">Дипломная работа</p><span class="label label--blue">В процессе</span></div>
+          <div><h3>userver × YDB</h3><p class="featured-project__text">Перевожу компоненты userver, работающие с топиками YDB, на Federated Topic SDK.</p><p class="meta">Совместно с командой YDB · C++, userver, YDB</p></div>
+        </article>
+        <div class="project-grid">
+          <article class="project">
+            <p class="eyebrow">Учебный проект · 2025</p>
+            <h3>Прогноз отмены бронирования</h3>
+            <p>Подготовила и проанализировала данные, сравнила дерево решений и случайный лес в задаче бинарной классификации. Набор данных — 44 638 записей и 29 исходных признаков.</p>
+            <p class="stack">Python · pandas · matplotlib · scikit-learn</p>
+            <a class="text-link" href="https://github.com/DillFennel/Hotels_decisionTree">Код проекта на GitHub</a>
+          </article>
+          <article class="project">
+            <p class="eyebrow">Научная работа · 2026</p>
+            <h3>Отказоустойчивость бизнеса при перебоях с доступом в Интернет</h3>
+            <p>Анализ цифровых решений и архитектурных подходов к адаптации ПО и сетей при ограничении доступа к глобальной сети.</p>
+            <p class="meta">XXXIX Международные Плехановские чтения</p>
+            <details><summary>Полное название работы</summary><p>«Анализ цифровых решений для обеспечения отказоустойчивости бизнеса при перебоях с доступом в глобальную сеть»</p></details>
+          </article>
+        </div>
+      </section>
+
+      <section class="section education-section" id="education" aria-labelledby="education-title">
+        <div class="section-heading"><h2 id="education-title">Образование</h2><p>Базовое образование и дополнительная подготовка</p></div>
+        <div class="education-grid">
+          <article class="degree"><p class="eyebrow">Бакалавриат · 2023–2027</p><h3>РЭУ им. Г. В. Плеханова</h3><p>Информатика и вычислительная техника</p><p class="meta">Обучение продолжается</p></article>
+          <div class="courses">
+            <article><h3>Школа бэкенд-разработки Яндекса</h3><p>2025 · C++, асинхронные сервисы на userver.</p><a class="text-link" href="data/sertificats/summer_school.pdf" target="_blank" rel="noopener">Сертификат школы <span class="sr-only">(PDF, откроется в новой вкладке)</span></a></article>
+            <article><h3>AI Agents Security Week</h3><p>Яндекс · Программа завершена.</p></article>
+            <article><h3>ДПО · Оператор электронно-вычислительных машин</h3><p>РЭУ им. Г. В. Плеханова · Обучение завершено, получен диплом.</p><details><summary>Название программы</summary><p>«Оператор электронно-вычислительных машин (Оператор персонального компьютера с изучением программы 1С:Предприятие 8.3)»</p></details></article>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section class="layout__education">
-          <h2>Образование</h2>
-          <article class="card">
-            <h3>РЭУ им. Г. В. Плеханова</h3>
-            <p class="meta">Бакалавриат · Информатика и вычислительная техника · 2023 — 2027</p>
-          </article>
-        </section>
-
-        <section class="layout__certificates">
-          <h2>Сертификаты</h2>
-          <div class="certificates">
-            <a
-              class="certificate-card"
-              href="data/sertificats/summer_school.pdf"
-              target="_blank"
-              rel="noopener"
-            >
-              <img
-                class="certificate-card__preview"
-                src="data/sertificats/summer_school_preview.png"
-                alt="Сертификат «Летние школы Яндекса — Школа бэкенд-разработки»"
-              />
-              <div class="certificate-card__info">
-                <h3 class="certificate-card__title">
-                  Летние школы Яндекса · Школа бэкенд-разработки
-                </h3>
-                <p class="meta">2025</p>
-              </div>
-            </a>
-          </div>
-        </section>
-      </main>
-
-      <footer class="footer">
-        <p>Последнее обновление: июнь 2026</p>
-      </footer>
-    </div>
-  </body>
+      <section class="contact-section" id="contact" aria-labelledby="contact-title">
+        <div><p class="eyebrow">Следующий шаг</p><h2 id="contact-title">Давайте познакомимся</h2><p>Ищу позицию C++ бэкенд-разработчика в штате.<br>Буду рада обсудить вашу команду и задачи.</p></div>
+        <div class="contact-links"><a class="button button--primary" href="https://t.me/dillfennel">Написать в Telegram</a><a href="mailto:dillfennelsch@gmail.com">dillfennelsch@gmail.com</a><a href="https://github.com/dillfennel">GitHub · DillFennel</a></div>
+      </section>
+    </main>
+    <footer class="footer"><p>Юлия Петрушина · Москва</p><p>Обновлено <time datetime="2026-11-24">24 ноября 2026</time></p><a href="#top">В начало</a></footer>
+  </div>
+</body>
 </html>
