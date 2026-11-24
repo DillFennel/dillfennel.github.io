@@ -73,12 +73,17 @@ p + p { margin-top:12px; }
 .project .text-link,.certificate-card .text-link { display:inline-block; margin-top:12px; }
 .table-scroll { margin-top:16px; max-width:100%; overflow-x:auto; }
 .table-scroll:focus-visible { outline:3px solid var(--ink); outline-offset:4px; }
-.model-results { width:100%; border-collapse:collapse; font-size:.8125rem; font-variant-numeric:tabular-nums; }
+.model-results { width:100%; border-collapse:separate; border-spacing:0; font-size:.8125rem; font-variant-numeric:tabular-nums; }
 .model-results caption { text-align:left; margin-bottom:8px; font-size:.875rem; font-weight:600; }
-.model-results th,.model-results td { padding:9px 12px; border:1px solid var(--line); text-align:center; white-space:nowrap; }
-.model-results thead th { background:#fff0eb; color:var(--link); font-weight:600; }
+.model-results th,.model-results td { padding:9px 12px; border:0; border-right:1px solid var(--line); border-bottom:1px solid var(--line); text-align:center; white-space:nowrap; }
+.model-results tr > :first-child { border-left:1px solid var(--line); }
+.model-results thead th { border-top:1px solid var(--line); background:#fff0eb; color:var(--link); font-weight:600; }
+.model-results thead th:first-child { border-top-left-radius:12px; }
+.model-results thead th:last-child { border-top-right-radius:12px; }
+.model-results tbody tr:last-child > :first-child { border-bottom-left-radius:12px; }
+.model-results tbody tr:last-child > :last-child { border-bottom-right-radius:12px; }
 .model-results tbody th { text-align:left; font-weight:500; }
-.model-results tbody tr:nth-child(even) { background:#faf7fc; }
+.model-results tbody tr:nth-child(even) > * { background:#faf7fc; }
 .model-results-note { margin-top:8px; }
 .certificates { grid-template-columns:repeat(2,minmax(0,1fr)); }
 .card.certificate-card { display:flex; align-items:center; gap:16px; padding:12px; }
