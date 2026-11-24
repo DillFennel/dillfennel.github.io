@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261125-certificates">
+  <link rel="stylesheet" href="styles.css?v=20261125-compact-certificates">
   <title>Юлия Петрушина — бэкенд-разработчик C++</title>
 </head>
 <body>
@@ -137,6 +137,19 @@
             <p>Всего 44 638 записей, включая данные о дате прибытия, количестве гостей, типах номеров, сегменте рынка и т. д. Целевая переменная is_canceled. Были проведены предварительный анализ и подготовка данных.</p>
             <p class="stack"><strong>Стек:</strong> Python, pandas, matplotlib, scikit-learn.</p>
             <a class="text-link" href="https://github.com/DillFennel/Hotels_decisionTree">Код проекта на GitHub</a>
+            <div class="table-scroll" role="region" aria-label="Результаты сравнения моделей" tabindex="0">
+              <table class="model-results" aria-describedby="model-results-note">
+                <caption>Результаты учебного эксперимента</caption>
+                <thead>
+                  <tr><th scope="col">Модель</th><th scope="col">Accuracy</th><th scope="col">Precision</th><th scope="col">Recall</th><th scope="col">FPR</th><th scope="col">ROC-AUC</th></tr>
+                </thead>
+                <tbody>
+                  <tr><th scope="row">RandomForestClassifier</th><td>0.8613</td><td>0.8471</td><td>0.6536</td><td>0.0502</td><td>0.8017</td></tr>
+                  <tr><th scope="row">DecisionTreeClassifier</th><td>0.8174</td><td>0.6892</td><td>0.7077</td><td>0.1359</td><td>0.7859</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="meta model-results-note" id="model-results-note">ROC-AUC рассчитан по предсказанным классам.</p>
           </article>
         </div>
       </section>
@@ -146,24 +159,28 @@
         <article class="card degree"><p class="eyebrow">Бакалавриат · 2023–2027</p><h3>РЭУ им. Г. В. Плеханова</h3><p>Информатика и вычислительная техника</p></article>
       </section>
 
-      <section class="layout__certificates" aria-labelledby="certificates-title">
+      <section class="layout__certificates" id="certificates" aria-labelledby="certificates-title">
         <h2 id="certificates-title">Сертификаты</h2>
         <div class="certificates">
           <article class="card certificate-card">
             <a class="certificate-card__preview" href="data/sertificats/summer_school.pdf" target="_blank" rel="noopener" aria-label="Открыть сертификат школы бэкенд-разработки (PDF, в новой вкладке)">
               <img src="data/sertificats/summer_school_preview.png" alt="Сертификат Юлии Петрушиной: Школа бэкенд-разработки Яндекса, C++, 2025" width="1190" height="1684" loading="lazy">
             </a>
-            <h3>Школа бэкенд-разработки Яндекса</h3>
-            <p>2025 · C++, асинхронные сервисы на userver.</p>
-            <a class="text-link" href="data/sertificats/summer_school.pdf" target="_blank" rel="noopener">Сертификат школы <span class="sr-only">(PDF, откроется в новой вкладке)</span></a>
+            <div class="certificate-card__info">
+              <h3>Школа бэкенд-разработки Яндекса</h3>
+              <p>2025 · C++, асинхронные сервисы на userver.</p>
+              <a class="text-link" href="data/sertificats/summer_school.pdf" target="_blank" rel="noopener">Сертификат школы <span class="sr-only">(PDF, откроется в новой вкладке)</span></a>
+            </div>
           </article>
           <article class="card certificate-card">
             <a class="certificate-card__preview" href="data/sertificats/ai_agents_security_week.pdf" target="_blank" rel="noopener" aria-label="Открыть сертификат AI Agents Security Week (PDF, в новой вкладке)">
               <img src="data/sertificats/ai_agents_security_week_preview.png" alt="Сертификат Юлии Петрушиной: интенсив AI Agents Security Week Школы анализа данных, 27–31 июля 2026" width="1600" height="1131" loading="lazy">
             </a>
-            <h3>AI Agents Security Week</h3>
-            <p>Яндекс · Школа анализа данных. Интенсив завершён 31 июля 2026.</p>
-            <a class="text-link" href="data/sertificats/ai_agents_security_week.pdf" target="_blank" rel="noopener">Сертификат интенсива <span class="sr-only">(PDF, откроется в новой вкладке)</span></a>
+            <div class="certificate-card__info">
+              <h3>AI Agents Security Week</h3>
+              <p>Яндекс · Школа анализа данных. Интенсив завершён 31 июля 2026.</p>
+              <a class="text-link" href="data/sertificats/ai_agents_security_week.pdf" target="_blank" rel="noopener">Сертификат интенсива <span class="sr-only">(PDF, откроется в новой вкладке)</span></a>
+            </div>
           </article>
         </div>
       </section>
