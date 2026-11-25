@@ -104,7 +104,11 @@ class Resume:
             style = 'meta' if 'eyebrow' in cls else 'small' if set(cls) & {'meta', 'stack', 'job__context', 'job__role'} else 'body'
             if 'meta' in cls and node.getprevious() is not None and node.getprevious().tag == 'h3':
                 style = 'meta'
-            return [self.paragraph(node, style)]
+            paragraph = self.paragraph(node, style)
+            following = node.getnext()
+            if 'project' in classes(node.getparent()) and following is not None and 'meta' in classes(following) and following.getnext() is None:
+                paragraph.keepWithNext = True
+            return [paragraph]
         if node.tag == 'a':
             if not node.text_content().strip():
                 return []
