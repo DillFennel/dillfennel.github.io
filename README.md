@@ -18,7 +18,7 @@ python -m http.server --directory _site
 ```
 
 Весь готовый сайт находится в `_site`, PDF - в
-`_site/data/resume/yulia-petrushina-cpp.pdf`. Оформление PDF задается в
+`_site/data/resume/cv_petrushina_yulia.pdf`. Оформление PDF задается в
 `scripts/build_site.py`, оформление веб-страницы - в `styles.css`.
 
 Open Sans распространяется по SIL Open Font License. Файлы шрифта взяты из

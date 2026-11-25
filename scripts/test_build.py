@@ -1,6 +1,7 @@
 """Verify that an HTML edit reaches the PDF and changes its download URL."""
 from pathlib import Path
 from tempfile import TemporaryDirectory
+import shutil
 import unittest
 
 from pypdf import PdfReader
@@ -17,6 +18,7 @@ class ResumeSyncTest(unittest.TestCase):
             source = root / 'source'
             source.mkdir()
             (source / 'data').mkdir()
+            shutil.copytree(repository / 'data/avatar', source / 'data/avatar')
             for name in ('index.html', 'styles.css', 'favicon.svg'):
                 (source / name).write_bytes((repository / name).read_bytes())
             build(source, root / 'first')
@@ -27,7 +29,7 @@ class ResumeSyncTest(unittest.TestCase):
             (source / 'index.html').write_text(index)
             build(source, root / 'second')
             updated = (root / 'second/index.html').read_text()
-            pdf = PdfReader(root / 'second/data/resume/yulia-petrushina-cpp.pdf')
+            pdf = PdfReader(root / 'second/data/resume/cv_petrushina_yulia.pdf')
             self.assertIn(normalized(phrase), normalized(''.join(p.extract_text() for p in pdf.pages)))
             original_link = html.fromstring(original).xpath('//a[@download]/@href')[0]
             updated_link = html.fromstring(updated).xpath('//a[@download]/@href')[0]

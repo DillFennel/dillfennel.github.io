@@ -10,7 +10,7 @@ from html import escape
 from pathlib import Path
 import re
 import shutil
-from urllib.parse import urljoin
+from urllib.parse import unquote, urljoin, urlsplit
 
 from lxml import html
 from pypdf import PdfReader
@@ -21,10 +21,10 @@ from reportlab.lib.units import mm
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.pdfgen.canvas import Canvas
-from reportlab.platypus import HRFlowable, KeepTogether, Paragraph, SimpleDocTemplate, Spacer, Table, TableStyle
+from reportlab.platypus import HRFlowable, Image, KeepTogether, Paragraph, SimpleDocTemplate, Spacer, Table, TableStyle
 
 FONT_DIR = Path(__file__).parent / 'fonts'
-PDF_PATH = Path('data/resume/yulia-petrushina-cpp.pdf')
+PDF_PATH = Path('data/resume/cv_petrushina_yulia.pdf')
 INK = colors.HexColor('#22242a')
 MUTED = colors.HexColor('#64656e')
 ACCENT = colors.HexColor('#b83316')
@@ -135,14 +135,23 @@ class Resume:
         return result
 
     def compose(self):
-        self.story.append(self.paragraph(self.root.xpath('//h1')[0], 'name'))
+        header_text = [self.paragraph(self.root.xpath('//h1')[0], 'name')]
         hero = self.root.xpath('//header[contains(@class,"hero")]')[0]
         role = hero.xpath('.//*[contains(@class,"hero__role")]')[0]
-        self.story.append(self.paragraph(role, 'role'))
+        header_text.append(self.paragraph(role, 'role'))
         contacts = self.root.xpath('//*[contains(concat(" ",normalize-space(@class)," ")," header-contacts ")]')[0]
-        self.story.append(self.paragraph(contacts, 'contact'))
+        header_text.append(self.paragraph(contacts, 'contact'))
         for p in hero.xpath('.//*[contains(@class,"hero__location") or contains(@class,"availability")]'):
-            self.story.append(self.paragraph(p, 'small'))
+            header_text.append(self.paragraph(p, 'small'))
+        portrait_node = hero.xpath('.//figure[contains(@class,"portrait")]//img')[0]
+        portrait_path = self.source.parent / unquote(urlsplit(portrait_node.get('src')).path).lstrip('/')
+        portrait = Image(str(portrait_path))
+        portrait.drawWidth = 32 * mm
+        portrait.drawHeight = portrait.drawWidth * portrait.imageHeight / portrait.imageWidth
+        portrait.hAlign = 'RIGHT'
+        header = Table([[header_text, portrait]], colWidths=[WIDTH-portrait.drawWidth-18,portrait.drawWidth+18], hAlign='LEFT')
+        header.setStyle(TableStyle([('VALIGN',(0,0),(-1,-1),'TOP'),('ALIGN',(1,0),(1,0),'RIGHT'),('LEFTPADDING',(0,0),(-1,-1),0),('RIGHTPADDING',(0,0),(0,0),8),('RIGHTPADDING',(1,0),(1,0),0),('TOPPADDING',(0,0),(-1,-1),0),('BOTTOMPADDING',(0,0),(-1,-1),0)]))
+        self.story.append(header)
         main = self.root.xpath('//main')[0]
         sections = list(main)
         i = 0
